@@ -62,6 +62,10 @@ nav a:hover {
     flex: 1;
 }
 
+.explore-header {
+    text-align: center;
+}
+
 .hero-content h2 {
     font-size: 40px;
     color: #302447;
@@ -359,4 +363,49 @@ nav a:hover {
     color: #302447;
     font-size: 26px;
     margin: 0 0 20px;
+}
+
+
+
+
+
+/* Book details page */
+.book-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 50px 8%;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd1eb;
+    border-radius: 15px;
+}
+
+/* Book cover */
+.book-details-image img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Book information */
+.book-details-content {
+    flex: 1;
+}
+
+.book-details-content h2 {
+    font-size: 32px;
+    color: #302447;
+    margin-top: 0;
+}
+
+.book-details-content h3 {
+    color: #68469b;
+    font-size: 24px;
+}
+
+.book-details-content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
 }
