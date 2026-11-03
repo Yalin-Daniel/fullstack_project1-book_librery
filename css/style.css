@@ -1,7 +1,8 @@
-General page settings
+/* General page settings */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f5f0fa;
 }
 
 /* Header */
@@ -193,9 +194,6 @@ nav a:hover {
 }
 
 
-
-
-
 /* Book categories section */
 .book-categories {
     padding: 50px 8%;
@@ -280,3 +278,25 @@ nav a:hover {
 .site-footer a:hover {
     color: #d5b9ff;
 }
+
+/* explorer */
+
+/* Book categories section */
+.book-categories-explor {
+    padding: 5px 20% 50px 20%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Individual category */
+.category-card-explor {
+    padding: 15px 20px;
+    border: 2.5px solid #ddd1eb;
+}
+
+.category-card-explor h3 {
+    margin:5px 0px;
+}
+
