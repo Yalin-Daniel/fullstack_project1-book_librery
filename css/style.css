@@ -1,3 +1,4 @@
+
 /* General page settings */
 body {
     margin: 0;
@@ -60,11 +61,13 @@ nav a:hover {
 .hero-content {
     flex: 1;
 }
+
 .hero-content h2 {
     font-size: 40px;
     color: #302447;
     margin-bottom: 20px;
 }
+
 .hero-content p {
     font-size: 20px;
     line-height: 1.8;
@@ -81,9 +84,11 @@ nav a:hover {
     padding: 14px 25px;
     border-radius: 8px;
 }
+
 .hero-button:hover {
     background-color: #49316e;
 }
+
 /* Hero image */
 .hero-image {
     flex: 1;
@@ -130,8 +135,6 @@ nav a:hover {
 }
 
 
-
-
 /* Featured books section */
 .featured-books {
     padding: 50px 8%;
@@ -163,12 +166,18 @@ nav a:hover {
     border: 1px solid #ddd1eb;
     border-radius: 12px;
     padding: 20px;
+    text-align: center;
+}
+
+/* Shared book images */
+.book-card img,
+.explore-book img {
+    width: 100%;
+    object-fit: contain;
 }
 
 .book-card img {
-    width: 100%;
     height: 280px;
-    object-fit: contain;
 }
 
 .book-card h3 {
@@ -180,16 +189,22 @@ nav a:hover {
     color: #555;
 }
 
-.book-card a {
+/* Shared book buttons */
+.book-card a,
+.explore-book a {
     display: inline-block;
     background-color: #68469b;
     color: white;
     text-decoration: none;
-    padding: 10px 18px;
     border-radius: 8px;
 }
 
-.book-card a:hover {
+.book-card a {
+    padding: 10px 18px;
+}
+
+.book-card a:hover,
+.explore-book a:hover {
     background-color: #49316e;
 }
 
@@ -221,7 +236,6 @@ nav a:hover {
 
 /* Individual category */
 .category-card {
-    display: block;
     padding: 30px 15px;
     background-color: #f5f0fa;
     border: 1px solid #ddd1eb;
@@ -264,7 +278,6 @@ nav a:hover {
 }
 
 .site-footer nav {
-    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -297,6 +310,53 @@ nav a:hover {
 }
 
 .category-card-explor h3 {
-    margin:5px 0px;
+    margin: 5px 0px;
 }
 
+
+/* Explore book */
+.explore-book {
+    text-align: center;
+    padding: 5px;
+}
+
+.explore-book img {
+    height: 210px;
+}
+
+.explore-book h3 {
+    color: #302447;
+    font-size: 17px;
+}
+
+.explore-book a {
+    padding: 8px 15px;
+}
+
+.explore-book p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Explore books layout */
+.explore-books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+/* Explore category section */
+.book-category-section-explor {
+    background-color: #f9f6fc;
+    border: 1px solid #ddd1eb;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin: 25px 4%;
+}
+
+/* Category heading */
+.book-category-section-explor h2 {
+    color: #302447;
+    font-size: 26px;
+    margin: 0 0 20px;
+}
