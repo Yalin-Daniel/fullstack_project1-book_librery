@@ -183,6 +183,15 @@ nav a:hover {
   object-fit: contain;
 }
 
+.explore-book img {
+    height: 210px;
+    transition: transform 0.3s ease;
+}
+
+.explore-book img:hover {
+    transform: scale(1.08);
+}
+
 .book-card img {
   height: 280px;
 }
@@ -378,6 +387,10 @@ nav a:hover {
   border-radius: 15px;
 }
 
+.book-details-image {
+    position: relative;
+}
+
 /* Book cover */
 .book-details-image img {
   width: 250px;
@@ -385,6 +398,46 @@ nav a:hover {
   border-radius: 8px;
 }
 
+/* Wand animation */
+.book-details-image::after {
+    content: "🪄";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 75px;
+    pointer-events: none;
+    animation: wand-touch 2.5s ease-in-out both;
+}
+@keyframes wand-touch {
+    0% {
+        opacity: 0;
+        transform: translate(40px, -20px) rotate(-30deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(20px, -80px) rotate(-50deg);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translate(0, -100px) rotate(-65deg);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translate(-20px, 20px) rotate(20deg);
+    }
+
+    75% {
+        transform: translate(-20px, 5px) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-20px, 5px) rotate(0deg);
+    }
+}
 /* Book information */
 .book-details-content {
   flex: 1;
