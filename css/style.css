@@ -343,6 +343,7 @@ nav a:hover {
 .explore-book h3 {
     color: #302447;
     font-size: 17px;
+    min-height: 45px;
 }
 
 .explore-book a {
@@ -356,9 +357,14 @@ nav a:hover {
 
 /* Explore books layout */
 .explore-books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.explore-book {
+    flex: 0 0 200px;
 }
 
 /* Explore category section */
