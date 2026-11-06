@@ -15,7 +15,7 @@ header {
 /* Navigation layout */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /*The first on the right, the second on the left, and a wind in the middle.*/
   align-items: center;
 }
 
@@ -38,8 +38,8 @@ nav ul {
 /* Links */
 nav a {
   color: white;
-  text-decoration: none;
-  font-size: 16px;
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; 
 }
 
 /* Hover effect */
@@ -94,8 +94,8 @@ nav a:hover {
 
 /* Hero image */
 .hero-image {
-  flex-shrink: 1;
-  flex-grow: 0;
+  flex-shrink: 1; /*Don't enlarge the image area to fill extra free space.*/
+  flex-grow: 0; /*Responsiveness - reducing the image area if the screen is narrow*/
   flex-basis: 40%;
 }
 
@@ -671,7 +671,7 @@ nav a:hover {
     gap: 15px;
   }
   .stats-container {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*When there is no room, a line descends*/
     gap: 15px;
   }
   .stat-card {
