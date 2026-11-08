@@ -23,7 +23,6 @@ nav {
 nav h1 {
   margin: 0;
   font-size: 24px;
-  text-align: center;
 }
 
 /* Navigation links list */
@@ -57,9 +56,6 @@ nav a:hover {
 }
 
 /* Hero text */
-.hero-content {
-  flex: 1;
-}
 
 .explore-header {
   text-align: center;
@@ -111,20 +107,16 @@ nav a:hover {
   background-color: white;
 }
 
+
 /* Cards container */
 .stats-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-/* Individual statistics card */
 .stat-card {
-  flex: 1;
-  background-color: #f5f0fa;
-  border: 1px solid #ddd1eb;
-  border-radius: 12px;
-  padding: 25px;
+  min-width: 0;
 }
 
 .stat-card h3 {
@@ -146,7 +138,7 @@ nav a:hover {
   text-align: center;
 }
 
-.featured-books h2 {
+.featured-books h2 , .reading-stats h2 {
   font-size: 30px;
   color: #302447;
 }
@@ -311,8 +303,8 @@ nav a:hover {
 /* Individual category */
 .category-card-explor {
   display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center; /* מרכז אופקית */
+    align-items: center;     /* מרכז אנכית */
 
   padding: 15px 20px;
   border: 2px solid #ddd1eb;
@@ -405,8 +397,9 @@ nav a:hover {
     top: 0;
     right: 0;
     font-size: 75px;
-    pointer-events: none;
-    animation: wand-touch 2.5s ease-in-out both;
+    pointer-events: none; 
+    /*Prevents the virtual wand element from being a target for mouse interactions, so it won't interfere with clicks on elements below it.*/
+    animation: wand-touch 2.5s ease-in-out both; /* ease-in-out both- A movement that begins and ends gradually*/
 }
 @keyframes wand-touch {
     0% {
@@ -515,7 +508,7 @@ nav a:hover {
 /* Recommendations table */
 .recommendations-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /*Attaching the frames*/
   text-align: center;
 }
 
@@ -671,15 +664,11 @@ nav a:hover {
     gap: 15px;
   }
   .stats-container {
-    flex-wrap: wrap; /*When there is no room, a line descends*/
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-  .stat-card {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: calc(50% - 15px);
-    box-sizing: border-box;
-  }
+
+
   .categories-grid,
   .books-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -704,10 +693,9 @@ nav a:hover {
 @media (max-width: 480px) {
   .book-categories-explor,
   .categories-grid,
-  .books-grid {
+  .books-grid ,
+  .stats-container{
     grid-template-columns: 1fr;
   }
-  .stats-container {
-    flex-direction: column;
-  }
+   
 }
